@@ -1,0 +1,51 @@
+<!-- formulário de cadastro de vaga -->
+<form method="post" class="form mt-4 mb-4">
+
+    <h4>Cadastrar Vaga</h4>
+
+    <div class="form-group">
+        <label for=""><b>número da vaga:</b></label> <input type="text"
+            class="form-control" value="" placeholder="Insira o nome do cargo"
+            name="id" [(ngModel)] = "vaga.id" required> <small class="form-text text-muted"><i>*
+                Utilize nomes e termos mais utilizados no mercado.</i></small>
+    </div>
+
+
+    <div class="form-group">
+        <label for=""><b>Nome da vaga:</b> </label> <input type="text"
+            class="form-control" value="" placeholder="Insira o nome do cargo"
+            name="nome" [(ngModel)] = "vaga.nome" required> <small class="form-text text-muted"><i>*
+                Utilize nomes e termos mais utilizados no mercado.</i></small>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <div class="form-group">
+                <label for=""><b>foto:</b></label> <input type="text"
+                    value="" name="foto" [(ngModel)] = "vaga.foto" class="form-control" required /> <small
+                    class="form-text text-muted"><i>* Email para contato.</i></small>
+            </div>
+        </div>
+
+        <div class="form-group">
+        <label for=""><b>salário:</b> </label> <input type="text"
+            class="form-control" value="" placeholder="Insira o salário"
+            name="salario" [(ngModel)] = "vaga.salario" required> <small class="form-text text-muted"><i>*
+                Não Utilize ponto e vírgila.</i></small>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+
+        <label for=""><b>Descrição do projeto:</b></label>
+        <textarea class="form-control" name="descricao" [(ngModel)] = "vaga.descricao" maxlength="254"
+            rows="3" required type="text"></textarea>
+        <small class="form-text text-muted"><i>* Breve resumo do projeto..</i></small>
+
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="cadastrar()">Enviar</button>
+  
+  </form>

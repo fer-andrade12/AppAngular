@@ -1,0 +1,10 @@
+.card-vagas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-vagas .card{
+    margin: 0 20px;
+    margin-top: 25px;
+}

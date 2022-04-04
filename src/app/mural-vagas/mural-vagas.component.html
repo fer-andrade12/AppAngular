@@ -1,0 +1,15 @@
+<section class="card-vagas container-fluid">
+
+  <div *ngFor="let vaga of vagas" class="row">
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="assets\img\{{vaga.foto}}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">{{vaga.nome}}</h5>
+        <p class="card-text">código {{vaga.id}}</p>
+        <p class="card-text text-wrap">Descrição{{vaga.descricao}}</p>
+        <p class="card-text">Salário r$ {{vaga.salario}}</p>
+      </div>
+    </div>
+  </div>
+</section>

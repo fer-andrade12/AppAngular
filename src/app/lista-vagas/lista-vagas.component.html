@@ -1,0 +1,60 @@
+
+<div class="container">
+
+  <h1>Lista de vagas</h1>  
+
+<table class="table table-striped" >
+
+  <thead>
+    <tr>
+      <th>foto</th>
+      <th>código</th>
+      <th>Nome da vaga</th>
+      <th>salario</th>
+      <th>descricao</th>
+      <th></th>
+    </tr>
+
+  </thead>
+  <tbody >
+
+    <tr *ngFor="let vaga of vagas">
+      <td>{{vaga.foto}}</td>
+      <td>{{vaga.id}}</td>
+      <td>{{vaga.nome}}</td>
+      <td>{{vaga.salario}}</td>
+      <td>{{vaga.descricao}}</td>
+      <td><a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#myModal">excluir</a></td>
+      <td><a class="btn btn-primary" routerLink="/form-edita/">Editar</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Excluir vaga</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Would you like to delet this job opportunity?
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="excluir(vaga.id)">Sim</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
